@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= dog.name %></title>
+</head>
+<body>
+  <h1><%= dog.name %></h1>
+
+  <p>Breed: <%= dog.breed %></p>
+  <p>Age: <%= dog.age %> years old</p>
+
+  <% if(dog.isAdopted){ %>
+    <p>This dog has already been adopted!</p>
+  <% }else{ %>
+    <p>This dog is still looking for a home!</p>
+  <% } %>
+
+  <form action="/dogs/<%=dog._id%>?_method=DELETE" method="POST">
+    <button type="submit">Delete <%= dog.name %></button>
+  </form>
+  <a href="/dogs/<%= dog._id %>/edit">Edit <%= dog.name %></a>
+  <a href="/dogs">Go back to all dogs</a>
+</body>
+</html>

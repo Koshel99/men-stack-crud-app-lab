@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rescue a Dog</title>
+</head>
+<body>
+    <h1>Rescue a Dog!</h1>
+    <a href="/dogs/">Back to Dogs</a>
+    <br>
+    <br>
+    <form action="/dogs" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="breed">Breed:</label>
+        <input type="text" name="breed" id="breed" />
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" min="0" />
+
+        <label for="isAdopted">Has the dog been adopted?</label>
+        <input type="checkbox" name="isAdopted" id="isAdopted" />
+
+        <button type="submit">Add Dog</button>
+    </form>
+</body>
+</html>
